@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost/todos', {useNewUrlParser: true, useUnified
         console.log('connect successfully');
     })
     .catch((err) => {
-        console.log(err)
+        console.log(err);
     })
 
 app.use('/todo', todoHandler);
