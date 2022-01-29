@@ -1,11 +1,12 @@
 //dependency
 const express = require('express');
-const mongoose = require('mongoose');
 const todoHandler = require('./routeHandler/todoHandler');
 
 const app = express();
 app.use(express.json());
 
+// import mongoose
+const mongoose = require('mongoose');
 //connection
 mongoose.connect('mongodb://localhost/todos', {useNewUrlParser: true, useUnifiedTopology: true, family: 4})
     .then(() => {
