@@ -1,6 +1,7 @@
 //dependency
 const express = require('express');
 const todoHandler = require('./routeHandler/todoHandler');
+const userHandler = require('./routeHandler/userHandler');
 
 const app = express();
 app.use(express.json());
@@ -17,6 +18,7 @@ mongoose.connect('mongodb://localhost/todos', {useNewUrlParser: true, useUnified
     })
 
 app.use('/todo', todoHandler);
+app.use('/user', userHandler);
 
 //another method
 // mongoose.connect('mongodb://localhost/todos', { useNewUrlParser: true, useUnifiedTopology: true, family: 4 }, (err) => {
